@@ -5,31 +5,20 @@
  */
 int main(void)
 {
-int tens;
-int ones;
-int t;
-int o;
-for (tens = '0'; tens <= '9'; tens++)
+int p, q;
+for (p = 0; p <= 98; p++)
 {
-for (ones = '0'; ones <= '9'; ones++)
+for (q = p + 1; q <= 99; q++)
 {
-for (t = tens; t <= '9'; t++)
-{
-for (o = ones + 1; o <= '9'; o++)
-{
-putchar(tens);
-putchar(ones);
+putchar((p / 10) + '0');
+putchar((p % 10) + '0');
 putchar(' ');
-putchar(t);
-putchar(o);
-if (!((tens == '9' && ones == '8') && (t == '9' && o == '9')))
-{
+putchar((q / 10) + '0');
+putchar((q % 10) + '0');
+if (p == 98 && q == 9)
+continue;
 putchar(',');
 putchar(' ');
-}
-}
-o = '0';
-}
 }
 }
 putchar('\n');
