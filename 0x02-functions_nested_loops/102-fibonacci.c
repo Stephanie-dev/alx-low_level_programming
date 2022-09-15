@@ -1,22 +1,22 @@
 #include <stdio.h>
 /**
- * main - print first 50 Fibonacci numbers
- * Return: 0
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int counter;
-int countto = 50;
-long a = 1;
-long b = 2;
-for (counter = 1; counter <= (countto / 2); counter++)
-{
-printf("%li %li ", a, b);
-a += b;
-b += a;
+int i;
+long int fibonacci[50];
+fibonacci[0] = 1;
+fibonacci[1] = 2;
+printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
+for (i = 2; i < 50; i++)
+fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+if (i == 49)
+printf("%ld\n", fibonacci[i]);
+else
+printf("%ld, ", fibonacci[i]);
 }
-if (countto % 2 == 1)
-printf("%li", a);
-printf("\n");
 return (0);
 }
