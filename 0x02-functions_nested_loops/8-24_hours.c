@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * jack_bauer - print every minute of a day
  * Description: print minutes 00:00 to 23:59
