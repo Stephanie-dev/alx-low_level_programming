@@ -2,7 +2,7 @@
 /**
  * print_numbers - print 0 to 9
  */
-void print_numbers(void)
+void print_most_numbers(void)
 {
 int i = '0';
 for (i = '0'; i <= '9'; i++)
